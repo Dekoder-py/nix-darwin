@@ -11,6 +11,7 @@
   let
     configuration = { pkgs, ... }: {
       # Packages
+      nixpkgs.config.allowUnfree = true;
       environment.systemPackages = import ./packages.nix { inherit pkgs; };
 
       # Necessary for using flakes on this system.
