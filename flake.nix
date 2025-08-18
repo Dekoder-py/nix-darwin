@@ -21,6 +21,8 @@
       homebrew.enable = true;
       homebrew.casks = [
         "obsidian"
+        "kitty"
+        "zen"
       ];
 
       # Necessary for using flakes on this system.
