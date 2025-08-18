@@ -18,13 +18,17 @@
       nixpkgs.config.allowUnfree = true;
       environment.systemPackages = import ./packages.nix { inherit pkgs; };
 
-      homebrew.enable = true;
+      homebrew = {
+        enable = true;
+        onActivation.autoUpdate = true;
+        onActivation.upgrade = true;
+      };
+
       homebrew.casks = [
         "obsidian"
         "kitty"
         "zen"
       ];
-
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
 
