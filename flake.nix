@@ -5,14 +5,23 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin.url = "github:nix-darwin/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+
+    nix-homebrew.url = "github:zhaofengli/nix-homebrew";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew }:
   let
     configuration = { pkgs, ... }: {
+      system.primaryUser = "kyleb";
+
       # Packages
       nixpkgs.config.allowUnfree = true;
       environment.systemPackages = import ./packages.nix { inherit pkgs; };
+
+      homebrew.enable = true;
+      homebrew.casks = [
+        "obsidian"
+      ];
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
@@ -37,7 +46,25 @@
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#darwin
     darwinConfigurations."darwin" = nix-darwin.lib.darwinSystem {
-      modules = [ configuration ];
+      modules = [
+          configuration
+          nix-homebrew.darwinModules.nix-homebrew
+            {
+              nix-homebrew = {
+                # Install Homebrew under the default prefix
+                enable = true;
+
+                # Apple Silicon Only: Also install Homebrew under the default Intel prefix for Rosetta 2
+                enableRosetta = true;
+
+                # User owning the Homebrew prefix
+                user = "kyleb";
+
+                # Automatically migrate existing Homebrew installations
+                autoMigrate = true;
+              };
+            }
+        ];
     };
   };
 }
