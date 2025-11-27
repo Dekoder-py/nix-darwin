@@ -33,6 +33,7 @@
           "alfred"
           "steam"
           "obsidian"
+          "slack"
         ];
       };
       environment.systemPackages = with pkgs; [
