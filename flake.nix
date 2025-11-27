@@ -5,9 +5,10 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin.url = "github:nix-darwin/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    nix-homebrew.url = "github:zhaofengli/nix-homebrew";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew }:
   let
     configuration = { pkgs, ... }: {
       # List packages installed in system profile. To search by name, run:
@@ -48,7 +49,24 @@
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#machine
     darwinConfigurations."machine" = nix-darwin.lib.darwinSystem {
-      modules = [ configuration ];
+      modules = [
+       nix-homebrew.darwinModules.nix-homebrew
+        {
+          nix-homebrew = {
+            # Install Homebrew under the default prefix
+            enable = true;
+
+            # Apple Silicon Only: Also install Homebrew under the default Intel prefix for Rosetta 2
+            enableRosetta = true;
+
+            # User owning the Homebrew prefix
+            user = "kyle";
+
+            # Automatically migrate existing Homebrew installations
+            autoMigrate = true;
+          };
+        }
+        configuration ];
     };
   };
 }
