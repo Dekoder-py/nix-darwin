@@ -64,6 +64,18 @@
 
             # Automatically migrate existing Homebrew installations
             autoMigrate = true;
+
+      onActivation = {
+      autoUpdate = true;
+      upgrade = true;
+      cleanup = "zap";
+    };
+    casks = [
+      "1password"
+      "1password-cli"
+      "firefox"
+      "ghostty"
+            ];
           };
         }
         configuration ];
