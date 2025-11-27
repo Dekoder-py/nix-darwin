@@ -35,23 +35,23 @@
           "obsidian"
         ];
       };
-      environment.systemPackages = [
-        pkgs.neovim
-        pkgs.yazi
-        pkgs.python3
-        pkgs.lazygit
-        pkgs.nodejs
-        pkgs.tmux
-        pkgs.stow
-        pkgs.zoxide
-        pkgs.eza
-        pkgs.ripgrep
-        pkgs.fd
-        pkgs.bat
-        pkgs.fzf
-        pkgs.gnupg
-        pkgs.gh
-        pkgs.cargo
+      environment.systemPackages = with pkgs; [
+        neovim
+        yazi
+        python3
+        lazygit
+        nodejs
+        tmux
+        stow
+        zoxide
+        eza
+        ripgrep
+        fd
+        bat
+        fzf
+        gnupg
+        gh
+        cargo
       ];
 
       nixpkgs.config.allowUnfree = true;
