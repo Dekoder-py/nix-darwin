@@ -15,9 +15,9 @@
     nix-homebrew,
   }: let
     configuration = {pkgs, ...}: {
-      # List packages installed in system profile. To search by name, run:
-      # $ nix-env -qaP | grep wget
+      system.primaryUser = "kyle";
       homebrew = {
+        enable = true;
         onActivation = {
           autoUpdate = true;
           upgrade = true;
