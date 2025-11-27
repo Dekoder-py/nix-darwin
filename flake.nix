@@ -32,6 +32,7 @@
           "setapp"
           "alfred"
           "steam"
+          "obsidian"
         ];
       };
       environment.systemPackages = [
