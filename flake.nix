@@ -29,6 +29,9 @@
           "firefox"
           "ghostty"
           "home-assistant"
+          "setapp"
+          "alfred"
+          "steam"
         ];
       };
       environment.systemPackages = [
