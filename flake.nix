@@ -8,22 +8,36 @@
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew }:
-  let
-    configuration = { pkgs, ... }: {
+  outputs = inputs @ {
+    self,
+    nix-darwin,
+    nixpkgs,
+    nix-homebrew,
+  }: let
+    configuration = {pkgs, ...}: {
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
-      environment.systemPackages =
-        [ pkgs.neovim
-          pkgs.yazi
-          pkgs.python3
-          pkgs.lazygit
-          pkgs.nodejs
-          pkgs.tmux
-          pkgs.firefox
-          pkgs._1password-gui
-          pkgs._1password-cli
+      homebrew = {
+        onActivation = {
+          autoUpdate = true;
+          upgrade = true;
+          # cleanup = "zap";
+        };
+        casks = [
+          "1password"
+          "1password-cli"
+          "firefox"
+          "ghostty"
         ];
+      };
+      environment.systemPackages = [
+        pkgs.neovim
+        pkgs.yazi
+        pkgs.python3
+        pkgs.lazygit
+        pkgs.nodejs
+        pkgs.tmux
+      ];
 
       nixpkgs.config.allowUnfree = true;
 
@@ -44,13 +58,13 @@
       # The platform the configuration will be used on.
       nixpkgs.hostPlatform = "aarch64-darwin";
     };
-  in
-  {
+  in {
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#machine
     darwinConfigurations."machine" = nix-darwin.lib.darwinSystem {
       modules = [
-       nix-homebrew.darwinModules.nix-homebrew
+        nix-homebrew.darwinModules.nix-homebrew
+
         {
           nix-homebrew = {
             # Install Homebrew under the default prefix
@@ -64,21 +78,11 @@
 
             # Automatically migrate existing Homebrew installations
             autoMigrate = true;
-
-      onActivation = {
-      autoUpdate = true;
-      upgrade = true;
-      cleanup = "zap";
-    };
-    casks = [
-      "1password"
-      "1password-cli"
-      "firefox"
-      "ghostty"
-            ];
           };
         }
-        configuration ];
+
+        configuration
+      ];
     };
   };
 }
