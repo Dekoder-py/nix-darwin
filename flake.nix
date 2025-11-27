@@ -58,6 +58,7 @@
       # enable Touch ID and Watch ID for sudo commands
       security.pam.services.sudo_local.touchIdAuth = true;
       security.pam.services.sudo_local.watchIdAuth = true;
+      security.pam.services.sudo_local.reattach = true;
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
