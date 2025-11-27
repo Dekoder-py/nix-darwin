@@ -21,13 +21,14 @@
         onActivation = {
           autoUpdate = true;
           upgrade = true;
-          # cleanup = "zap";
+          cleanup = "zap";
         };
         casks = [
           "1password"
           "1password-cli"
           "firefox"
           "ghostty"
+          "home-assistant"
         ];
       };
       environment.systemPackages = [
@@ -37,6 +38,16 @@
         pkgs.lazygit
         pkgs.nodejs
         pkgs.tmux
+        pkgs.stow
+        pkgs.zoxide
+        pkgs.eza
+        pkgs.ripgrep
+        pkgs.fd
+        pkgs.bat
+        pkgs.fzf
+        pkgs.gnupg
+        pkgs.gh
+        pkgs.cargo
       ];
 
       nixpkgs.config.allowUnfree = true;
