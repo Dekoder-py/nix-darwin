@@ -64,7 +64,6 @@
         reattach = true;
       };
 
-
       # disable the macron menu
       system.defaults.NSGlobalDomain.ApplePressAndHoldEnabled = true;
 
