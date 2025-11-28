@@ -37,6 +37,7 @@
         ];
       };
       environment.systemPackages = with pkgs; [
+        btop
         neovim
         yazi
         python3
