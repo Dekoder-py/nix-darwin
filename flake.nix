@@ -37,6 +37,7 @@
         ];
       };
       environment.systemPackages = with pkgs; [
+        tree-sitter
         btop
         neovim
         yazi
