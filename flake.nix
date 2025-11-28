@@ -84,7 +84,7 @@
       system.defaults.trackpad.Clicking = true;
 
       # disable the macron menu
-      system.defaults.NSGlobalDomain.ApplePressAndHoldEnabled = true;
+      system.defaults.NSGlobalDomain.ApplePressAndHoldEnabled = false;
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
