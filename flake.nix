@@ -76,7 +76,7 @@
 
       # Dock Settings
       system.defaults.dock.autohide = true;
-      system.defaults.dock.autohide-delay = 0;
+      system.defaults.dock.autohide-delay = 0.0;
 
       # Trackpad
       system.defaults.trackpad.Clicking = true;
