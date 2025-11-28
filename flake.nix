@@ -34,6 +34,7 @@
           "steam"
           "obsidian"
           "slack"
+          "signal"
         ];
       };
       environment.systemPackages = with pkgs; [
