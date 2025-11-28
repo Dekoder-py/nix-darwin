@@ -38,6 +38,7 @@
         ];
       };
       environment.systemPackages = with pkgs; [
+        pnpm
         tree-sitter
         btop
         neovim
