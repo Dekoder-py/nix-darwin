@@ -67,6 +67,20 @@
         reattach = true;
       };
 
+      # Finder Settings
+      system.defaults.finder.ShowPathbar = true;
+      system.defaults.finder.AppleShowAllExtensions = true;
+      system.defaults.finder.FXPreferredViewStyle = "Nlsv"; # List view
+      system.defaults.finder.ShowStatusBar = true;
+      system.defaults.finder.CreateDesktop = false; # Disable desktop items
+
+      # Dock Settings
+      system.defaults.dock.autohide = true;
+      system.defaults.dock.autohide-delay = 0;
+
+      # Trackpad
+      system.defaults.trackpad.Clicking = true;
+
       # disable the macron menu
       system.defaults.NSGlobalDomain.ApplePressAndHoldEnabled = true;
 
