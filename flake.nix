@@ -38,6 +38,7 @@
         ];
       };
       environment.systemPackages = with pkgs; [
+        serve
         pnpm
         tree-sitter
         btop
