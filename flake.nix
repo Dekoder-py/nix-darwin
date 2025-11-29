@@ -24,6 +24,7 @@
           cleanup = "zap";
         };
         casks = [
+          "sf-symbols"
           "prismlauncher"
           "1password"
           "1password-cli"
