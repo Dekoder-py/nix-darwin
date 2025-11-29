@@ -24,6 +24,7 @@
           cleanup = "zap";
         };
         casks = [
+          "prism-launcher"
           "1password"
           "1password-cli"
           "firefox"
