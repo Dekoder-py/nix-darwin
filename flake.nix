@@ -24,6 +24,7 @@
           cleanup = "zap";
         };
         casks = [
+          "obs"
           "altserver"
           "sf-symbols"
           "prismlauncher"
