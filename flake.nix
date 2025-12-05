@@ -24,6 +24,7 @@
           cleanup = "zap";
         };
         casks = [
+          "raspberry-pi-imager"
           "obs"
           "altserver"
           "sf-symbols"
