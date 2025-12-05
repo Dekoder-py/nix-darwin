@@ -24,6 +24,7 @@
           cleanup = "zap";
         };
         casks = [
+          "wakatime"
           "raspberry-pi-imager"
           "obs"
           "altserver"
