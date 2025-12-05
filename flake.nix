@@ -24,6 +24,7 @@
           cleanup = "zap";
         };
         casks = [
+          "discord"
           "wakatime"
           "raspberry-pi-imager"
           "obs"
