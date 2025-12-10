@@ -45,6 +45,7 @@
         ];
       };
       environment.systemPackages = with pkgs; [
+        docker
         uv
         serve
         pnpm
