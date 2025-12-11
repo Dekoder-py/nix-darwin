@@ -86,6 +86,8 @@
       system.defaults.finder.FXPreferredViewStyle = "Nlsv"; # List view
       system.defaults.finder.ShowStatusBar = true;
       system.defaults.finder.CreateDesktop = false; # Disable desktop items
+      system.defaults.dock.minimize-to-application = true; # Minimize apps into their icon
+      system.defaults.dock.showhidden = true; # Make hidden apps' icons translucent
 
       # Dock Settings
       system.defaults.dock.autohide = true;
