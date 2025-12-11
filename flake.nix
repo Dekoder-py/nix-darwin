@@ -46,6 +46,7 @@
         ];
       };
       environment.systemPackages = with pkgs; [
+        wget
         docker
         uv
         serve
