@@ -46,6 +46,7 @@
         ];
       };
       environment.systemPackages = with pkgs; [
+        vercel
         wget
         docker
         uv
