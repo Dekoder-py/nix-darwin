@@ -23,7 +23,7 @@
           upgrade = true;
           cleanup = "zap";
         };
-        greedyCasks = true; # upgrade casks marked as greedy 
+        greedyCasks = true; # upgrade casks marked as greedy
         casks = [
           "docker-desktop"
           "discord"
@@ -96,6 +96,29 @@
       system.defaults.dock.autohide = true;
       system.defaults.dock.autohide-delay = 0.0;
       system.defaults.dock.show-recents = false;
+      system.defaults.dock.persistent-apps = [
+        {
+          app = "/Applications/Firefox.app/";
+        }
+        {
+          app = "/Applications/Ghostty.app/";
+        }
+        {
+          app = "/Applications/Xcode.app/";
+        }
+        {
+          app = "/Applications/Obsidian.app/";
+        }
+        {
+          app = "/Applications/Slack.app/";
+        }
+        {
+          app = "/System/Applications/Mail.app/";
+        }
+        {
+          app = "/Applications/Cider.app/";
+        }
+      ];
 
       # Trackpad
       system.defaults.trackpad.Clicking = true;
