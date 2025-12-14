@@ -84,6 +84,10 @@
       };
 
       system.defaults = {
+        # Mac Settings
+        NSGlobalDomain.AppleInterfaceStyle = "Dark";
+        NSGlobalDomain.ApplePressAndHoldEnabled = false;
+
         # Finder Settings
         finder.ShowPathbar = true;
         finder.AppleShowAllExtensions = true;
@@ -123,9 +127,6 @@
 
         # Trackpad
         trackpad.Clicking = true;
-
-        # disable the macron menu
-        NSGlobalDomain.ApplePressAndHoldEnabled = false;
       };
 
       # Necessary for using flakes on this system.
