@@ -14,8 +14,11 @@
     nixpkgs,
     nix-homebrew,
   }: let
+    hostname = "machine";
     configuration = {pkgs, ...}: {
+      networking.hostName = hostname;
       system.primaryUser = "kyle";
+
       homebrew = {
         enable = true;
         onActivation = {
@@ -144,8 +147,8 @@
     };
   in {
     # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#machine
-    darwinConfigurations."machine" = nix-darwin.lib.darwinSystem {
+    # $ darwin-rebuild build --flake .#<whatever hostname is set in the var at the top of outputs>
+    darwinConfigurations.${hostname} = nix-darwin.lib.darwinSystem {
       modules = [
         nix-homebrew.darwinModules.nix-homebrew
 
