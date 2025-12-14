@@ -90,6 +90,7 @@
         # Mac Settings
         NSGlobalDomain.AppleInterfaceStyle = "Dark";
         NSGlobalDomain.ApplePressAndHoldEnabled = false;
+        keyboard.remapCapsLockToControl = true; # caps -> control
 
         # Finder Settings
         finder.ShowPathbar = true;
