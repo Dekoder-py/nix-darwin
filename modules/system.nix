@@ -8,7 +8,10 @@
     reattach = true;
   };
 
-  system.keyboard.remapCapsLockToControl = true; # caps -> control
+  system.keyboard = {
+    enableKeyMapping = true;
+    remapCapsLockToControl = true; # caps -> control
+  };
 
   system.defaults = {
     # Mac Settings
