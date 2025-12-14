@@ -86,11 +86,12 @@
         reattach = true;
       };
 
+      system.keyboard.remapCapsLockToControl = true; # caps -> control
+
       system.defaults = {
         # Mac Settings
         NSGlobalDomain.AppleInterfaceStyle = "Dark";
         NSGlobalDomain.ApplePressAndHoldEnabled = false;
-        keyboard.remapCapsLockToControl = true; # caps -> control
 
         # Finder Settings
         finder.ShowPathbar = true;
@@ -105,7 +106,8 @@
         dock.show-recents = false; # Don't show recent apps
         dock.minimize-to-application = true; # Minimize apps into their icon
         dock.showhidden = true; # Make hidden apps' icons translucent
-        dock.persistent-apps = [ # set dock apps
+        dock.persistent-apps = [
+          # set dock apps
           {
             app = "/Applications/Firefox.app/";
           }
