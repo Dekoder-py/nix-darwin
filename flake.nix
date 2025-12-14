@@ -83,48 +83,50 @@
         reattach = true;
       };
 
-      # Finder Settings
-      system.defaults.finder.ShowPathbar = true;
-      system.defaults.finder.AppleShowAllExtensions = true;
-      system.defaults.finder.FXPreferredViewStyle = "Nlsv"; # List view
-      system.defaults.finder.ShowStatusBar = true;
-      system.defaults.finder.CreateDesktop = false; # Disable desktop items
-      system.defaults.dock.minimize-to-application = true; # Minimize apps into their icon
-      system.defaults.dock.showhidden = true; # Make hidden apps' icons translucent
+      system.defaults = {
+        # Finder Settings
+        finder.ShowPathbar = true;
+        finder.AppleShowAllExtensions = true;
+        finder.FXPreferredViewStyle = "Nlsv"; # List view
+        finder.ShowStatusBar = true;
+        finder.CreateDesktop = false; # Disable desktop items
 
-      # Dock Settings
-      system.defaults.dock.autohide = true;
-      system.defaults.dock.autohide-delay = 0.0;
-      system.defaults.dock.show-recents = false;
-      system.defaults.dock.persistent-apps = [
-        {
-          app = "/Applications/Firefox.app/";
-        }
-        {
-          app = "/Applications/Ghostty.app/";
-        }
-        {
-          app = "/Applications/Xcode.app/";
-        }
-        {
-          app = "/Applications/Obsidian.app/";
-        }
-        {
-          app = "/Applications/Slack.app/";
-        }
-        {
-          app = "/System/Applications/Mail.app/";
-        }
-        {
-          app = "/Applications/Cider.app/";
-        }
-      ];
+        # Dock Settings
+        dock.autohide = true; # auto hide dock
+        dock.autohide-delay = 0.0; # no delay for showing dock
+        dock.show-recents = false; # Don't show recent apps
+        dock.minimize-to-application = true; # Minimize apps into their icon
+        dock.showhidden = true; # Make hidden apps' icons translucent
+        dock.persistent-apps = [ # set dock apps
+          {
+            app = "/Applications/Firefox.app/";
+          }
+          {
+            app = "/Applications/Ghostty.app/";
+          }
+          {
+            app = "/Applications/Xcode.app/";
+          }
+          {
+            app = "/Applications/Obsidian.app/";
+          }
+          {
+            app = "/Applications/Slack.app/";
+          }
+          {
+            app = "/System/Applications/Mail.app/";
+          }
+          {
+            app = "/Applications/Cider.app/";
+          }
+        ];
 
-      # Trackpad
-      system.defaults.trackpad.Clicking = true;
+        # Trackpad
+        trackpad.Clicking = true;
 
-      # disable the macron menu
-      system.defaults.NSGlobalDomain.ApplePressAndHoldEnabled = false;
+        # disable the macron menu
+        NSGlobalDomain.ApplePressAndHoldEnabled = false;
+      };
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
