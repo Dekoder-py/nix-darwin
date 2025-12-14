@@ -26,6 +26,7 @@
 
       networking.hostName = hostname;
       system.primaryUser = "kyle";
+      users.users.kyle.home = /Users/kyle;
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
