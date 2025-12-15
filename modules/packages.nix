@@ -3,13 +3,11 @@
     nodePackages.vercel
     mas
     wget
-    docker
     uv
     serve
     pnpm
     tree-sitter
     btop
-    neovim
     yazi
     python3
     lazygit
