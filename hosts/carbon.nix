@@ -12,11 +12,10 @@ in {
     ../modules/homebrew.nix
     ../modules/system.nix
     ../modules/packages.nix
-    # ../modules/home-manager.nix (Commented out because home manager is a WIP - uncomment when usable)
+    ../modules/home-manager.nix
   ];
 
   environment.systemPackages = with pkgs; [
-    neovim # remove when uncommenting home manager (home manager will install neovim)
   ];
 
   homebrew.casks = [
