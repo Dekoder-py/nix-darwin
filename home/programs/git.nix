@@ -1,8 +1,11 @@
 {
   programs.git = {
     enable = true;
-    userName = "Dekoder-py";
-    userEmail = "kyle@codingcorner.dev";
+    settings = {
+      user = {
+        name = "Dekoder-py";
+        email = "kyle@codingcorner.dev";
+      };
+    };
   };
 }
-
