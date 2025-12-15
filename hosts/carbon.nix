@@ -1,4 +1,8 @@
-{username, ...}: let
+{
+  username,
+  pkgs,
+  ...
+}: let
 in {
   system.primaryUser = username;
   users.users.kyle.home = "/Users/${username}";
@@ -8,7 +12,11 @@ in {
     ../modules/homebrew.nix
     ../modules/system.nix
     ../modules/packages.nix
-    ../modules/home-manager.nix
+    # ../modules/home-manager.nix (Commented out because home manager is a WIP - uncomment when usable)
+  ];
+
+  environment.systemPackages = with pkgs; [
+    neovim # remove when uncommenting home manager (home manager will install neovim)
   ];
 
   homebrew.casks = [
