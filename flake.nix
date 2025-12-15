@@ -40,11 +40,10 @@
     };
   in {
     # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#<whatever hostname is set in the var at the top of outputs>
-    darwinConfigurations.${hostname} = nix-darwin.lib.darwinSystem {
+    # $ darwin-rebuild build --flake .#carbon
+    darwinConfigurations.carbon = nix-darwin.lib.darwinSystem {
       modules = [
         nix-homebrew.darwinModules.nix-homebrew
-
         {
           nix-homebrew = {
             # Install Homebrew under the default prefix
@@ -60,7 +59,6 @@
             autoMigrate = true;
           };
         }
-
         configuration
       ];
     };
