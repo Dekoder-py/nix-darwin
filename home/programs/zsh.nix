@@ -42,6 +42,8 @@
     };
 
     initContent = ''
+      bindkey -e
+      bindkey -v
       eval "$(zoxide init zsh --cmd z)"
 
       export FZF_DEFAULT_COMMAND='fd --hidden --exclude Library --exclude Applications --exclude ".cache"' # fzf will use fd, inculding hidden and excluding large folders
