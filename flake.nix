@@ -26,7 +26,11 @@
           modules
           ++ [
             {networking.hostName = hostname;}
-            {_module.args.username = username;}
+            {
+              _module.args = {
+                inherit username self;
+              };
+            }
             nix-homebrew.darwinModules.nix-homebrew
           ];
       };
