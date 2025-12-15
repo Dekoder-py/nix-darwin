@@ -27,13 +27,13 @@
       modules,
     }:
       nix-darwin.lib.darwinSystem {
+        specialArgs = {
+          inherit username;
+        };
         modules =
           modules
           ++ [
             {networking.hostName = hostname;}
-            {
-              _module.args.username = username;
-            }
             home-manager.darwinModules.home-manager
             nix-homebrew.darwinModules.nix-homebrew
           ];
