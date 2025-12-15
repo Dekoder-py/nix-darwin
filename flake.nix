@@ -8,6 +8,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {
@@ -15,6 +19,7 @@
     nix-darwin,
     nixpkgs,
     nix-homebrew,
+    home-manager,
   }: let
     mkDarwinHost = {
       hostname,
@@ -31,6 +36,17 @@
                 inherit username self;
               };
             }
+
+            home-manager.darwinModules.home-manager
+
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.${username} = import ./home;
+              };
+            }
+
             nix-homebrew.darwinModules.nix-homebrew
           ];
       };
