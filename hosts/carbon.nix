@@ -1,7 +1,7 @@
 {username, ...}: let
 in {
   system.primaryUser = username;
-  users.users.kyle.home = /Users/kyle;
+  users.users.kyle.home = "/Users/${username}";
 
   imports = [
     ../modules/base.nix
