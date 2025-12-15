@@ -12,6 +12,7 @@ in {
 
   homebrew.casks = [
     "google-chrome"
+    "godot"
   ];
 
   system.defaults.dock.persistent-apps = [
