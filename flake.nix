@@ -42,9 +42,16 @@
     # $ darwin-rebuild build --flake .#carbon
     darwinConfigurations = {
       carbon = mkDarwinHost {
+        # macbook pro
         hostname = "carbon";
         username = "kyle";
         modules = [./hosts/carbon.nix];
+      };
+      darwin = mkDarwinHost {
+        # macbook air
+        hostname = "darwin";
+        username = "kyleb";
+        modules = [./hosts/darwin.nix];
       };
     };
   };

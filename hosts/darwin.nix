@@ -1,7 +1,7 @@
 {username, ...}: let
 in {
   system.primaryUser = username;
-  users.users.kyle.home = /Users/kyle;
+  users.users.kyleb.home = /Users/kyleb;
 
   imports = [
     ../modules/base.nix
@@ -11,6 +11,6 @@ in {
   ];
 
   homebrew.casks = [
-    "docker-desktop"
+    "google-chrome"
   ];
 }
