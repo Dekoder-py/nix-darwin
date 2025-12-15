@@ -26,7 +26,7 @@
           modules
           ++ [
             {networking.hostName = hostname;}
-            { _module.args.username = username; }
+            {_module.args.username = username;}
             nix-homebrew.darwinModules.nix-homebrew
           ];
       };
@@ -38,11 +38,9 @@
     # $ darwin-rebuild build --flake .#carbon
     darwinConfigurations = {
       carbon = mkDarwinHost {
-        modules = [
-          hostname = "carbon";
-          username = "kyle";
-          ./hosts/carbon.nix
-        ];
+        hostname = "carbon";
+        username = "kyle";
+        modules = [./hosts/carbon.nix];
       };
     };
   };
