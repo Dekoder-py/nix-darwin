@@ -1,8 +1,12 @@
-{nix-homebrew, ...}: {
+{
+  username,
+  nix-homebrew,
+  ...
+}: {
   nix-homebrew = {
     enable = true;
     enableRosetta = true;
-    user = "kyle";
+    user = username;
     autoMigrate = true;
   };
 

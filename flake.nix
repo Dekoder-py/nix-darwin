@@ -16,36 +16,34 @@
     nixpkgs,
     nix-homebrew,
   }: let
+    mkDarwinHost = {
+      hostname,
+      username,
+      modules,
+    }:
+      nix-darwin.lib.darwinSystem {
+        modules =
+          modules
+          ++ [
+            {networking.hostName = hostname;}
+            { _module.args.username = username; }
+            nix-homebrew.darwinModules.nix-homebrew
+          ];
+      };
+
     configuration = {pkgs, ...}: {
-      imports = [
-        ./modules/homebrew.nix
-        ./modules/system.nix
-        ./modules/packages.nix
-        ./hosts/carbon.nix
-      ];
-
-
-      # Necessary for using flakes on this system.
-      nix.settings.experimental-features = "nix-command flakes";
-
-      # Set Git commit hash for darwin-version.
-      system.configurationRevision = self.rev or self.dirtyRev or null;
-
-      # Used for backwards compatibility, please read the changelog before changing.
-      # $ darwin-rebuild changelog
-      system.stateVersion = 6;
-
-      # The platform the configuration will be used on.
-      nixpkgs.hostPlatform = "aarch64-darwin";
     };
   in {
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#carbon
-    darwinConfigurations.carbon = nix-darwin.lib.darwinSystem {
-      modules = [
-        configuration
-        nix-homebrew.darwinModules.nix-homebrew
-      ];
+    darwinConfigurations = {
+      carbon = mkDarwinHost {
+        modules = [
+          hostname = "carbon";
+          username = "kyle";
+          ./hosts/carbon.nix
+        ];
+      };
     };
   };
 }
