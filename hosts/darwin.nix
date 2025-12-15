@@ -8,10 +8,10 @@ in {
     ../modules/homebrew.nix
     ../modules/system.nix
     ../modules/packages.nix
+    ../modules/home-manager.nix
   ];
 
   environment.systemPackages = with pkgs; [
-    neovim # keep this here until home manager is enabled on darwin (neovim will be installed via home manager)
   ];
 
   homebrew.casks = [
