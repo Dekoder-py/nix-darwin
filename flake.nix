@@ -37,18 +37,6 @@
               };
             }
             home-manager.darwinModules.home-manager
-
-            {
-              home-manager = {
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                extraSpecialArgs = {
-                  inherit username;
-                };
-                users.${username} = import ./home;
-              };
-            }
-
             nix-homebrew.darwinModules.nix-homebrew
           ];
       };

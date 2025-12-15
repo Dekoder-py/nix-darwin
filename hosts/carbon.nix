@@ -8,6 +8,7 @@ in {
     ../modules/homebrew.nix
     ../modules/system.nix
     ../modules/packages.nix
+    ../modules/home-manager.nix
   ];
 
   homebrew.casks = [
