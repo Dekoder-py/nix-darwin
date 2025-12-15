@@ -28,11 +28,6 @@
     initExtra = ''
       set -o vi
 
-      zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-      zstyle ':completion:*' list-colors "${s.:. LS_COLORS}"
-      zstyle ':completion:*' menu no
-      zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
-
       [ "$TERM" = "xterm-kitty" ] && alias ssh='kitty +kitten ssh' # fix ssh in kitty
       if [[ "$TERM" == "xterm-ghostty" ]]; then
       alias ssh='TERM=xterm-256color ssh'
