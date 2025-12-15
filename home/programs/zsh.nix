@@ -25,7 +25,7 @@
       lt = "eza --icons=always --tree";
     };
 
-    initExtra = ''
+    initContent = ''
       set -o vi
 
       [ "$TERM" = "xterm-kitty" ] && alias ssh='kitty +kitten ssh' # fix ssh in kitty
