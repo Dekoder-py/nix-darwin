@@ -31,30 +31,6 @@
     dock.show-recents = false; # Don't show recent apps
     dock.minimize-to-application = true; # Minimize apps into their icon
     dock.showhidden = true; # Make hidden apps' icons translucent
-    dock.persistent-apps = [
-      # set dock apps
-      {
-        app = "/Applications/Firefox.app/";
-      }
-      {
-        app = "/Applications/Ghostty.app/";
-      }
-      {
-        app = "/Applications/Xcode.app/";
-      }
-      {
-        app = "/Applications/Obsidian.app/";
-      }
-      {
-        app = "/Applications/Slack.app/";
-      }
-      {
-        app = "/System/Applications/Mail.app/";
-      }
-      {
-        app = "/Applications/Cider.app/";
-      }
-    ];
 
     # Trackpad
     trackpad.Clicking = true;

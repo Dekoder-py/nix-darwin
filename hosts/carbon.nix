@@ -18,4 +18,29 @@ in {
     "obs"
     "altserver"
   ];
+
+  system.defaults.dock.persistent-apps = [
+    # set dock apps
+    {
+      app = "/Applications/Firefox.app/";
+    }
+    {
+      app = "/Applications/Ghostty.app/";
+    }
+    {
+      app = "/Applications/Xcode.app/";
+    }
+    {
+      app = "/Applications/Obsidian.app/";
+    }
+    {
+      app = "/Applications/Slack.app/";
+    }
+    {
+      app = "/System/Applications/Mail.app/";
+    }
+    {
+      app = "/Applications/Cider.app/";
+    }
+  ];
 }
