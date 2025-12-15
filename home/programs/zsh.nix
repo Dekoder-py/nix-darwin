@@ -1,6 +1,11 @@
 {pkgs, ...}: {
   programs.zsh = {
     enable = true;
+
+    sessionVariables = {
+      TERM = "xterm-256color";
+    };
+
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
@@ -35,12 +40,6 @@
     };
 
     initContent = ''
-      set -o vi
-
-      if [[ "$TERM" == "xterm-ghostty" ]]; then
-      alias ssh='TERM=xterm-256color ssh'
-      fi
-
       eval "$(zoxide init zsh --cmd z)"
 
       export FZF_DEFAULT_COMMAND='fd --hidden --exclude Library --exclude Applications --exclude ".cache"' # fzf will use fd, inculding hidden and excluding large folders
