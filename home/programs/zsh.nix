@@ -5,7 +5,7 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
-    defaultKeymap = "vicmd";
+    defaultKeymap = "viins";
 
     oh-my-zsh = {
       enable = true;
