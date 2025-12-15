@@ -44,6 +44,7 @@
     darwinConfigurations.carbon = nix-darwin.lib.darwinSystem {
       modules = [
         configuration
+        nix-homebrew.darwinModules.nix-homebrew
       ];
     };
   };
