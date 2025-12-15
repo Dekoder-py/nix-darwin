@@ -33,7 +33,7 @@
       alias ssh='TERM=xterm-256color ssh'
       fi
 
-      eval "$(zoxide init zsh --cmd cd)"
+      eval "$(zoxide init zsh --cmd z)"
 
       export FZF_DEFAULT_COMMAND='fd --hidden --exclude Library --exclude Applications --exclude ".cache"' # fzf will use fd, inculding hidden and excluding large folders
       # The following lines have been added by Docker Desktop to enable Docker CLI completions.
