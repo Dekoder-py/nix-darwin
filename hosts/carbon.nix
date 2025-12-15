@@ -12,5 +12,10 @@ in {
 
   homebrew.casks = [
     "docker-desktop"
+    "setapp"
+    "raspberry-pi-imager"
+    "sf-symbols"
+    "obs"
+    "altserver"
   ];
 }
