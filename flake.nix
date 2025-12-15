@@ -28,7 +28,7 @@
     }:
       nix-darwin.lib.darwinSystem {
         specialArgs = {
-          inherit username;
+          inherit self username;
         };
         modules =
           modules
