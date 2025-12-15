@@ -1,6 +1,7 @@
 {
   programs.ghostty = {
     enable = true;
+    package = null; # nixpkgs doesn't have a package for my system (ghostty is installed through homebrew)
 
     settings = {
       theme = "catppuccin-mocha";
