@@ -30,7 +30,6 @@
     initContent = ''
       set -o vi
 
-      [ "$TERM" = "xterm-kitty" ] && alias ssh='kitty +kitten ssh' # fix ssh in kitty
       if [[ "$TERM" == "xterm-ghostty" ]]; then
       alias ssh='TERM=xterm-256color ssh'
       fi
@@ -38,6 +37,7 @@
       eval "$(zoxide init zsh --cmd z)"
 
       export FZF_DEFAULT_COMMAND='fd --hidden --exclude Library --exclude Applications --exclude ".cache"' # fzf will use fd, inculding hidden and excluding large folders
+
       # The following lines have been added by Docker Desktop to enable Docker CLI completions.
       fpath=(/Users/kyle/.docker/completions $fpath)
       autoload -Uz compinit
