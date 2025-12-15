@@ -4,6 +4,23 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
+
+    defaultKeymap = "vicmd";
+
+    oh-my-zsh = {
+      enable = true;
+      theme = "edvardm";
+      plugins = [
+        "git"
+        "sudo"
+        "zsh-bat"
+      ];
+    };
+
+    shellAliases = {
+      ".." = "cd ..";
+      "..." = "cd ...";
+      lg = "lazygit";
+    };
   };
 }
-
