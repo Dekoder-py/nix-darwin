@@ -19,7 +19,6 @@
     };
     greedyCasks = true; # upgrade casks marked as greedy
     casks = [
-      "docker-desktop"
       "discord"
       "wakatime"
       "raspberry-pi-imager"
