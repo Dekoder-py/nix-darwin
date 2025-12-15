@@ -35,6 +35,8 @@
       ll = "eza -lha --icons=always --sort=name --group-directories-first";
       ld = "eza -lhD --icons=always";
       lt = "eza --icons=always --tree";
+      src = "source ~/.zshrc";
+
       update-flake = "cd /etc/nix-darwin && nix flake update && git add flake.lock && git commit && git push";
       rebuild = "sudo darwin-rebuild switch";
     };
