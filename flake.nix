@@ -32,9 +32,7 @@
           ++ [
             {networking.hostName = hostname;}
             {
-              _module.args = {
-                inherit username self;
-              };
+              _module.args.username = username;
             }
             home-manager.darwinModules.home-manager
             nix-homebrew.darwinModules.nix-homebrew
