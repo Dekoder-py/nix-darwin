@@ -9,6 +9,6 @@
     extraSpecialArgs = {
       inherit username;
     };
-    users.${username} = import ./home;
+    users.${username} = import ../home;
   };
 }
