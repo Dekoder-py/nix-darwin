@@ -18,7 +18,6 @@
     fd
     fzf
     gnupg
-    gh
     cargo
   ];
 }
