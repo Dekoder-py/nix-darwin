@@ -10,6 +10,7 @@
     ./programs/zsh.nix
     ./programs/neovim.nix
     ./programs/ghostty.nix
+    ./programs/bat.nix
   ];
 }
 
