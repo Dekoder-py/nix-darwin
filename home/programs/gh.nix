@@ -2,16 +2,15 @@
   programs.gh = {
     enable = true;
     hosts = {
-  "github.com" = {
-    user = "<Dekoder-py>";
-  };
-}</Dekoder-py>
+      "github.com" = {
+        user = "Dekoder-py";
+      };
+    };
 
-        settings = {
-  git_protocol = "ssh";
+    settings = {
+      git_protocol = "ssh";
 
-  prompt = "enabled";
-};
-
+      prompt = "enabled";
+    };
   };
 }
