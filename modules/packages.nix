@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     nodePackages.vercel
     mas
@@ -18,7 +18,6 @@
     eza
     ripgrep
     fd
-    bat
     fzf
     gnupg
     gh
