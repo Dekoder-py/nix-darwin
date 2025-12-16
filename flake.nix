@@ -14,49 +14,52 @@
     };
   };
 
-  outputs = inputs @ {
-    self,
-    nix-darwin,
-    nixpkgs,
-    nix-homebrew,
-    home-manager,
-  }: let
-    mkDarwinHost = {
-      hostname,
-      username,
-      modules,
+  outputs =
+    inputs @ { self
+    , nix-darwin
+    , nixpkgs
+    , nix-homebrew
+    , home-manager
+    ,
     }:
-      nix-darwin.lib.darwinSystem {
-        specialArgs = {
-          inherit self username;
+    let
+      mkDarwinHost =
+        { hostname
+        , username
+        , modules
+        ,
+        }:
+        nix-darwin.lib.darwinSystem {
+          specialArgs = {
+            inherit self username;
+          };
+          modules =
+            modules
+            ++ [
+              { networking.hostName = hostname; }
+              home-manager.darwinModules.home-manager
+              nix-homebrew.darwinModules.nix-homebrew
+            ];
         };
-        modules =
-          modules
-          ++ [
-            {networking.hostName = hostname;}
-            home-manager.darwinModules.home-manager
-            nix-homebrew.darwinModules.nix-homebrew
-          ];
-      };
 
-    configuration = {pkgs, ...}: {
-    };
-  in {
-    # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#carbon
-    darwinConfigurations = {
-      carbon = mkDarwinHost {
-        # macbook pro
-        hostname = "carbon";
-        username = "kyle";
-        modules = [./hosts/carbon.nix];
+      configuration = { pkgs, ... }: { };
+    in
+    {
+      # Build darwin flake using:
+      # $ darwin-rebuild build --flake .#carbon
+      darwinConfigurations = {
+        carbon = mkDarwinHost {
+          # macbook pro
+          hostname = "carbon";
+          username = "kyle";
+          modules = [ ./hosts/carbon.nix ];
+        };
+        darwin = mkDarwinHost {
+          # macbook air
+          hostname = "darwin";
+          username = "kyleb";
+          modules = [ ./hosts/darwin.nix ];
+        };
       };
-      darwin = mkDarwinHost {
-        # macbook air
-        hostname = "darwin";
-        username = "kyleb";
-        modules = [./hosts/darwin.nix];
-      };
     };
-  };
 }

@@ -1,7 +1,6 @@
-{
-  username,
-  nix-homebrew,
-  ...
+{ username
+, nix-homebrew
+, ...
 }: {
   nix-homebrew = {
     enable = true;

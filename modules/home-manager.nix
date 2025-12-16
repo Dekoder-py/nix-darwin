@@ -1,7 +1,6 @@
-{
-  username,
-  home-manager,
-  ...
+{ username
+, home-manager
+, ...
 }: {
   home-manager = {
     useGlobalPkgs = true;

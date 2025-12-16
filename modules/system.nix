@@ -1,4 +1,4 @@
-{...}: {
+{ ... }: {
   nixpkgs.config.allowUnfree = true;
 
   # enable Touch ID and Watch ID for sudo commands

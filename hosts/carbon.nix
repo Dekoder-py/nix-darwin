@@ -1,8 +1,8 @@
-{
-  username,
-  pkgs,
-  ...
-}: let
+{ username
+, pkgs
+, ...
+}:
+let
 in {
   system.primaryUser = username;
   users.users.kyle.home = "/Users/${username}";
