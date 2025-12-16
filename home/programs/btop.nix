@@ -91,7 +91,7 @@
         theme[process_start]="#74c7ec"
         theme[process_mid]="#b4befe"
         theme[process_end]="#cba6f7"
-        ''
+      '';
     };
   };
 }
