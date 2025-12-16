@@ -9,7 +9,6 @@
     tree-sitter
     yazi
     python3
-    lazygit
     nodejs
     tmux
     stow

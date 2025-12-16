@@ -12,6 +12,7 @@
     ./programs/ghostty.nix
     ./programs/bat.nix
     ./programs/btop.nix
+    ./programs/lazygit.nix
   ];
 }
 
