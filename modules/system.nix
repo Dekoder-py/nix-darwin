@@ -21,10 +21,11 @@
     # Finder Settings
     finder = {
       ShowPathbar = true;
+      ShowStatusBar = true;
       AppleShowAllExtensions = true;
       FXPreferredViewStyle = "Nlsv"; # List view
-      ShowStatusBar = true;
       CreateDesktop = false; # Disable desktop items
+      NewWindowTarget = "Home";
     };
 
     # Dock Settings
