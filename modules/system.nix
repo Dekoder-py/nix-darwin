@@ -26,11 +26,16 @@
     finder.CreateDesktop = false; # Disable desktop items
 
     # Dock Settings
-    dock.autohide = true; # auto hide dock
-    dock.autohide-delay = 0.0; # no delay for showing dock
-    dock.show-recents = false; # Don't show recent apps
-    dock.minimize-to-application = true; # Minimize apps into their icon
-    dock.showhidden = true; # Make hidden apps' icons translucent
+    dock = {
+      autohide = true;
+      autohide-delay = 0.0; # No delay for showing dock
+      show-recents = false; # Don't show recent apps
+      minimize-to-application = true; # Minimize apps into their icon
+      showhidden = true; # Make hidden apps' icons translucent
+      mineffect = "scale"; # Minimize effect set to scale
+      magnification = true; # Magnify icons
+      tilesize = 64;
+    };
 
     # Trackpad
     trackpad.Clicking = true;
