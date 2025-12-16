@@ -19,11 +19,13 @@
     NSGlobalDomain.ApplePressAndHoldEnabled = false;
 
     # Finder Settings
-    finder.ShowPathbar = true;
-    finder.AppleShowAllExtensions = true;
-    finder.FXPreferredViewStyle = "Nlsv"; # List view
-    finder.ShowStatusBar = true;
-    finder.CreateDesktop = false; # Disable desktop items
+    finder = {
+      ShowPathbar = true;
+      AppleShowAllExtensions = true;
+      FXPreferredViewStyle = "Nlsv"; # List view
+      ShowStatusBar = true;
+      CreateDesktop = false; # Disable desktop items
+    };
 
     # Dock Settings
     dock = {
