@@ -10,7 +10,6 @@
     yazi
     python3
     nodejs
-    tmux
     stow
     zoxide
     eza
