@@ -7,7 +7,6 @@
     serve
     pnpm
     tree-sitter
-    btop
     yazi
     python3
     lazygit

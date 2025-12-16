@@ -11,6 +11,7 @@
     ./programs/neovim.nix
     ./programs/ghostty.nix
     ./programs/bat.nix
+    ./programs/btop.nix
   ];
 }
 
