@@ -1,20 +1,16 @@
-{
+{pkgs, ...}: {
   programs.tmux = {
     enable = true;
     prefix = "C-s";
     terminal = "xterm-256color";
     baseIndex = 1;
     keyMode = "vi";
-    plugins = [
-      tmuxPlugins.tmux-fzf
-      {
-        plugin = tmuxPlugins.tmux-fzf;
-      }
+    newSession = true;
 
-      tmuxPlugins.yank
-      {
-        plugin = tmuxPlugins.yank;
-      }
+    plugins = with pkgs.tmuxPlugins; [
+      tmux-fzf
+      yank
+      resurrect
     ];
 
     extraConfig = ''
