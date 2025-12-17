@@ -27,6 +27,7 @@
       "ghostty"
       "home-assistant"
       "alfred"
+      "raycast"
       "steam"
       "obsidian"
       "slack"
