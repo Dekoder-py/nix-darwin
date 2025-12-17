@@ -15,6 +15,7 @@
     ./programs/btop.nix
     ./programs/lazygit.nix
     ./programs/tmux.nix
+    ./programs/fastfetch.nix
   ];
 }
 
