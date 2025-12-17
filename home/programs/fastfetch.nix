@@ -21,11 +21,8 @@
         {
           type = "datetime";
           key = "Time";
-          format = "{14}:{17}:{20}";
+          format = "{02}:{17}:{20}";
         }
-        "break"
-        "player"
-        "media"
       ];
     };
   };
