@@ -41,6 +41,11 @@
     };
 
     # Trackpad
-    trackpad.Clicking = true;
+    trackpad = {
+      Clicking = true;
+      TrackpadRightClick = true;
+      TrackpadThreeFingerHorizSwipeGesture = 1; # Three finger swipe left/right for spaces
+      TrackpadTwoFingerDoubleTapGesture = true; # Two finger double tap for smart zoom
+    };
   };
 }
