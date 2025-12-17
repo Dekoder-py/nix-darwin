@@ -13,6 +13,7 @@
         separator = "  ";
       };
       modules = [
+        "title"
         "host"
         "os"
         "cpu"
