@@ -14,6 +14,7 @@
       };
       modules = [
         "host"
+        "os"
         "cpu"
         "gpu"
         "packages"
