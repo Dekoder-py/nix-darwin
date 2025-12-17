@@ -14,6 +14,7 @@
       };
       modules = [
         "title"
+        "separator"
         "host"
         "os"
         "cpu"
