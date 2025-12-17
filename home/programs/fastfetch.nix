@@ -23,6 +23,14 @@
           key = "Time";
           format = "{02}:{17}:{20}";
         }
+        "host"
+        "cpu"
+        "gpu"
+        "packages"
+        "uptime"
+        "display"
+        "disk"
+        "memory"
       ];
     };
   };
