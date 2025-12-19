@@ -32,5 +32,8 @@
       "slack"
       "signal"
     ];
+    masApps = {
+      "Ghosttery" = 6504861501;
+    }
   };
 }
