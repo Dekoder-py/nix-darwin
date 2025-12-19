@@ -33,7 +33,8 @@
       "signal"
     ];
     masApps = {
-      "Ghosttery" = 6504861501;
+      "Ghostery for Safari" = 6504861501;
+      "1Password for Safari" = 1569813296;
     };
   };
 }
