@@ -23,7 +23,6 @@
       "prismlauncher"
       "1password"
       "1password-cli"
-      "firefox"
       "ghostty"
       "home-assistant"
       "alfred"
