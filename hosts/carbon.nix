@@ -30,7 +30,7 @@ in {
   system.defaults.dock.persistent-apps = [
     # set dock apps
     {
-      app = "/Applications/Safari.app/";
+      app = "/Applications/Orion.app/";
     }
     {
       app = "/Applications/Ghostty.app/";

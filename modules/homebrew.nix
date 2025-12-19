@@ -18,6 +18,7 @@
     };
     greedyCasks = true; # upgrade casks marked as greedy
     casks = [
+      "orion"
       "discord"
       "wakatime"
       "prismlauncher"
@@ -32,9 +33,5 @@
       "slack"
       "signal"
     ];
-    masApps = {
-      "Ghostery for Safari" = 6504861501;
-      "1Password for Safari" = 1569813296;
-    };
   };
 }
