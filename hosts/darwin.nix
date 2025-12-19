@@ -23,7 +23,7 @@ in {
   system.defaults.dock.persistent-apps = [
     # set dock apps
     {
-      app = "/Applications/Firefox.app/";
+      app = "/Applications/Safari.app/";
     }
     {
       app = "/Applications/Google Chrome.app/";
