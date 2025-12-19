@@ -2,6 +2,7 @@
   environment.systemPackages = with pkgs; [
     nodePackages.vercel
     mas
+    yt-dlp
     wget
     uv
     serve
