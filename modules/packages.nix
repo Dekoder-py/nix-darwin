@@ -2,6 +2,7 @@
   environment.systemPackages = with pkgs; [
     nodePackages.vercel
     mas
+    thunderbird
     maven
     yt-dlp
     wget
