@@ -6,6 +6,7 @@
         name = "Dekoder-py";
         email = "kyle@codingcorner.dev";
       };
+      init.defaultBranch = "main";
     };
   };
 }
