@@ -32,6 +32,7 @@
       "obsidian"
       "slack"
       "signal"
+      "thunderbird"
     ];
   };
 }

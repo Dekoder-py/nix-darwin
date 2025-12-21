@@ -45,7 +45,7 @@ in {
       app = "/Applications/Slack.app/";
     }
     {
-      app = "/System/Applications/Mail.app/";
+      app = "/Applications/Thunderbird.app";
     }
     {
       app = "/Applications/Cider.app/";
