@@ -23,7 +23,7 @@ in {
   system.defaults.dock.persistent-apps = [
     # set dock apps
     {
-      app = "/Applications/Orion.app/";
+      app = "/Applications/Zen.app/";
     }
     {
       app = "/Applications/Google Chrome.app/";

@@ -18,7 +18,7 @@
     };
     greedyCasks = true; # upgrade casks marked as greedy
     casks = [
-      "orion"
+      "zen"
       "discord"
       "wakatime"
       "prismlauncher"
