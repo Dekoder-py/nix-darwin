@@ -39,7 +39,8 @@
           lua_ls.enable = true;
           pyright.enable = true;
           ts_ls.enable = true;
-          astgrep.enable = true;
+          ast_grep.enable = true;
+          html.enable = true;
         };
       };
       cmp = {
