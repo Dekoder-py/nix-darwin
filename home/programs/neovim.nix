@@ -8,7 +8,7 @@
       expandtab = true; 
       number = true;
       relativenumber = true;
-      signcolumn = true;
+      signcolumn = "yes";
     };
 
     colorschemes.catppuccin.enable = true;
