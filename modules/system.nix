@@ -1,4 +1,4 @@
-{ ... }: {
+{...}: {
   nixpkgs.config.allowUnfree = true;
 
   # enable Touch ID and Watch ID for sudo commands
@@ -15,8 +15,11 @@
 
   system.defaults = {
     # Mac Settings
-    NSGlobalDomain.AppleInterfaceStyle = "Dark";
-    NSGlobalDomain.ApplePressAndHoldEnabled = false;
+    NSGlobalDomain = {
+      AppleInterfaceStyle = "Dark";
+      ApplePressAndHoldEnabled = false;
+      AppleWindowTabbingMode = "manual";
+    };
 
     # Finder Settings
     finder = {
