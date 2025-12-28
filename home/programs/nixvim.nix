@@ -12,6 +12,7 @@
       number = true;
       relativenumber = true;
       signcolumn = "yes";
+      scrolloff = 8;
     };
 
     colorschemes.catppuccin.enable = true;
@@ -32,7 +33,14 @@
           ts_ls.enable = true;         
           astgrep.enable = true;         
         };
-    };
+      };
+      cmp = {
+        enable = true;
+        autoEnableSources = true;
+      };
+
+      cmp-nvim-lsp.enable = true;
+      luasnip.enable = true;
       indent-blankline.enable = true;
       gitsigns.enable = true;
       lazygit.enable = true;
