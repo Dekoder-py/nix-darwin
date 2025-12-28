@@ -41,7 +41,7 @@
             {networking.hostName = hostname;}
             home-manager.darwinModules.home-manager
             nix-homebrew.darwinModules.nix-homebrew
-            <nixvim>.nixosModules.nixvim
+            nixvim.homeModules.nixvim
           ];
       };
 
