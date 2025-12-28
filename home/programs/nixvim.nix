@@ -54,6 +54,7 @@
           nix = [ "nixfmt" ];
           lua = [ "stylua" ];
           python = [ "black" ];
+          html = [ "prettier" ];
           javascript = [ "prettier" ];
           typescript = [ "prettier" ];
         };
