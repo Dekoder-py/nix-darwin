@@ -84,6 +84,16 @@
       }
       {
         mode = "n";
+        key = "<leader>f";
+        action = "<cmd>lua vim.lsp.buf.format()<CR>";
+        options = {
+          noremap = true;
+          silent = true;
+          desc = "Format code";
+        };
+      }
+      {
+        mode = "n";
         key = "<leader>e";
         action = "<cmd>Oil<CR>";
         options = {
