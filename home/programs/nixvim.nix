@@ -5,6 +5,7 @@
     prettier
     black
     ast-grep
+    vscode-langservers-extracted
   ];
   programs.nixvim = {
     enable = true;
