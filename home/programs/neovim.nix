@@ -27,6 +27,7 @@
       lazygit.enable = true;
       telescope.enable = true;
       web-devicons.enable = true;
+      oil.enable = true;
     };
 
     keymaps = [
@@ -48,6 +49,16 @@
         noremap = true;
         silent = true;
         desc = "Open LazyGit";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>e";
+      action = "<cmd>Oil<CR>";
+      options = {
+        noremap = true;
+        silent = true;
+        desc = "Open Oil";
       };
     }
   ];
