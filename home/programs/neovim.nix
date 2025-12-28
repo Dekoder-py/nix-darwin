@@ -18,9 +18,8 @@
         highlight.enable = true;
         indent.enable = true;
       };
-      indent-blankline = {
-        enable = true;
-      };
+      indent-blankline.enable = true;
+      gitsigns.enable = true;
     };
   };
 }
