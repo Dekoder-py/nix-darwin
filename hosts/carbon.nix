@@ -19,6 +19,7 @@ in {
   ];
 
   homebrew.casks = [
+    "godot"
     "docker-desktop"
     "setapp"
     "raspberry-pi-imager"
