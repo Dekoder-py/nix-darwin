@@ -1,4 +1,10 @@
+{ pkgs, ... }:
 {
+  home.packages = with pkgs; [
+    nixfmt
+    prettier
+    black
+  ];
   programs.nixvim = {
     enable = true;
 
