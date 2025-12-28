@@ -22,6 +22,16 @@
         highlight.enable = true;
         indent.enable = true;
       };
+      lsp = {
+    enable = true;
+
+    servers = {
+      nixd.enable = true;          
+      lua_ls.enable = true;        
+      pyright.enable = true;       
+      ts_ls.enable = true;         
+      astgrep.enable = true;         
+    };
       indent-blankline.enable = true;
       gitsigns.enable = true;
       lazygit.enable = true;
