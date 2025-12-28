@@ -1,12 +1,5 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [
-    nixfmt
-    stylua
-    black
-    prettier
-  ];
-
   programs.nixvim = {
     enable = true;
 
@@ -47,19 +40,8 @@
         autoEnableSources = true;
       };
 
-      conform-nvim = {
-        enable = true;
-
-        formattersByFt = {
-          nix = [ "nixfmt" ];
-          lua = [ "stylua" ];
-          python = [ "black" ];
-          html = [ "prettier" ];
-          javascript = [ "prettier" ];
-          typescript = [ "prettier" ];
-        };
-      };
-
+      none-ls.enable = true;
+      lsp-format.enable = true;
       cmp-nvim-lsp.enable = true;
       luasnip.enable = true;
       indent-blankline.enable = true;
