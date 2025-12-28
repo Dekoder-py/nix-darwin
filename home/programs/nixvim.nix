@@ -6,9 +6,9 @@
     globals.maplocalleader = " ";
 
     opts = {
-      tabstop = 2;      
-      shiftwidth = 2;   
-      expandtab = true; 
+      tabstop = 2;
+      shiftwidth = 2;
+      expandtab = true;
       number = true;
       relativenumber = true;
       signcolumn = "yes";
@@ -27,16 +27,28 @@
         enable = true;
 
         servers = {
-          nixd.enable = true;          
-          lua_ls.enable = true;        
-          pyright.enable = true;       
-          ts_ls.enable = true;         
-          astgrep.enable = true;         
+          nixd.enable = true;
+          lua_ls.enable = true;
+          pyright.enable = true;
+          ts_ls.enable = true;
+          astgrep.enable = true;
         };
       };
       cmp = {
         enable = true;
         autoEnableSources = true;
+      };
+
+      conform-nvim = {
+        enable = true;
+
+        formattersByFt = {
+          nix = [ "nixfmt" ];
+          lua = [ "stylua" ];
+          python = [ "black" ];
+          javascript = [ "prettier" ];
+          typescript = [ "prettier" ];
+        };
       };
 
       cmp-nvim-lsp.enable = true;
@@ -50,36 +62,36 @@
     };
 
     keymaps = [
-    {
-      mode = "n";
-      key = "<leader><space>";
-      action = "<cmd>Telescope find_files<CR>";
-      options = {
-        noremap = true;
-        silent = true;
-        desc = "Find files (Telescope)";
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>lg";
-      action = "<cmd>LazyGit<CR>";
-      options = {
-        noremap = true;
-        silent = true;
-        desc = "Open LazyGit";
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>e";
-      action = "<cmd>Oil<CR>";
-      options = {
-        noremap = true;
-        silent = true;
-        desc = "Open Oil";
-      };
-    }
-  ];
+      {
+        mode = "n";
+        key = "<leader><space>";
+        action = "<cmd>Telescope find_files<CR>";
+        options = {
+          noremap = true;
+          silent = true;
+          desc = "Find files (Telescope)";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>lg";
+        action = "<cmd>LazyGit<CR>";
+        options = {
+          noremap = true;
+          silent = true;
+          desc = "Open LazyGit";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>e";
+        action = "<cmd>Oil<CR>";
+        options = {
+          noremap = true;
+          silent = true;
+          desc = "Open Oil";
+        };
+      }
+    ];
   };
 }
