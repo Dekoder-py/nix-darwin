@@ -21,6 +21,8 @@
       };
       indent-blankline.enable = true;
       gitsigns.enable = true;
+      lazygit.enable = true;
+      telescope.enable = true;
     };
   };
 }
