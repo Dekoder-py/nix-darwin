@@ -33,7 +33,7 @@
     }:
       nix-darwin.lib.darwinSystem {
         specialArgs = {
-          inherit self username;
+          inherit self username nixvim;
         };
         modules =
           modules
@@ -41,7 +41,6 @@
             {networking.hostName = hostname;}
             home-manager.darwinModules.home-manager
             nix-homebrew.darwinModules.nix-homebrew
-            nixvim.homeModules.nixvim
           ];
       };
 

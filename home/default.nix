@@ -1,6 +1,7 @@
 {
   pkgs,
   username,
+  nixvim,
   ...
 }: {
   home.username = username;
@@ -15,6 +16,7 @@
   ];
 
   imports = [
+    nixvim.homeModules.nixvim
     ./programs/git.nix
     ./programs/gh.nix
     ./programs/zsh.nix

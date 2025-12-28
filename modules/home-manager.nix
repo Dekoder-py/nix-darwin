@@ -1,12 +1,13 @@
 { username
 , home-manager
+, nixvim
 , ...
 }: {
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
     extraSpecialArgs = {
-      inherit username;
+      inherit username nixvim;
     };
     users.${username} = import ../home;
   };
