@@ -4,6 +4,7 @@
     nixfmt
     prettier
     black
+    ast-grep
   ];
   programs.nixvim = {
     enable = true;
