@@ -1,4 +1,12 @@
+{ pkgs, ... }:
 {
+  home.packages = with pkgs; [
+    nixfmt
+    stylua
+    black
+    prettier
+  ];
+
   programs.nixvim = {
     enable = true;
 
