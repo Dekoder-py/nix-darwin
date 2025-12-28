@@ -18,6 +18,7 @@
     };
     greedyCasks = true; # upgrade casks marked as greedy
     casks = [
+      "iina"
       "zen"
       "discord"
       "wakatime"
