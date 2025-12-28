@@ -1,13 +1,6 @@
-{ config, ... }: {
-  programs.neovim = {
+{
+  programs.nixvim = {
     enable = true;
-    defaultEditor = true;
-  };
-
-  xdg.configFile."nvim" = {
-    source =
-      config.lib.file.mkOutOfStoreSymlink
-        "${config.home.homeDirectory}/dotfiles/.config/nvim";
-    recursive = true;
+    colorschemes.catppuccin.enable = true;
   };
 }
