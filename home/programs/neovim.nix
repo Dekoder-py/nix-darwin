@@ -26,6 +26,7 @@
       gitsigns.enable = true;
       lazygit.enable = true;
       telescope.enable = true;
+      web-devicons.enable = true;
     };
 
     keymaps = [
@@ -37,6 +38,16 @@
         noremap = true;
         silent = true;
         desc = "Find files (Telescope)";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>lg";
+      action = "<cmd>LazyGit<CR>";
+      options = {
+        noremap = true;
+        silent = true;
+        desc = "Open LazyGit";
       };
     }
   ];
