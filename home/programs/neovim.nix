@@ -6,11 +6,12 @@
       tabstop = 2;      
       shiftwidth = 2;   
       expandtab = true; 
+      number = true;
+      relativenumber = true;
+      signcolumn = true;
     };
 
     colorschemes.catppuccin.enable = true;
-
-    statusline.lualine.enable = true;
 
     plugins = {
       treesitter = {
