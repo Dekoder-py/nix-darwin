@@ -33,6 +33,7 @@
       "slack"
       "signal"
       "thunderbird"
+      "zed"
     ];
   };
 }
