@@ -12,55 +12,57 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # nixvim = {
+    #   url = "github:nix-community/nixvim";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 
-  outputs = inputs @ {
-    self,
-    nix-darwin,
-    nixpkgs,
-    nix-homebrew,
-    home-manager,
-    nixvim,
-  }: let
-    mkDarwinHost = {
-      hostname,
-      username,
-      modules,
+  outputs =
+    inputs@{
+      self,
+      nix-darwin,
+      nixpkgs,
+      nix-homebrew,
+      home-manager,
+    # nixvim,
     }:
-      nix-darwin.lib.darwinSystem {
-        specialArgs = {
-          inherit self username nixvim;
-        };
-        modules =
-          modules
-          ++ [
-            {networking.hostName = hostname;}
+    let
+      mkDarwinHost =
+        {
+          hostname,
+          username,
+          modules,
+        }:
+        nix-darwin.lib.darwinSystem {
+          specialArgs = {
+            inherit self username;
+          };
+          modules = modules ++ [
+            { networking.hostName = hostname; }
             home-manager.darwinModules.home-manager
             nix-homebrew.darwinModules.nix-homebrew
           ];
-      };
+        };
 
-    configuration = {pkgs, ...}: {};
-  in {
-    # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#carbon
-    darwinConfigurations = {
-      carbon = mkDarwinHost {
-        # macbook pro
-        hostname = "carbon";
-        username = "kyle";
-        modules = [./hosts/carbon.nix];
-      };
-      darwin = mkDarwinHost {
-        # macbook air
-        hostname = "darwin";
-        username = "kyleb";
-        modules = [./hosts/darwin.nix];
+      configuration = { pkgs, ... }: { };
+    in
+    {
+      # Build darwin flake using:
+      # $ darwin-rebuild build --flake .#carbon
+      darwinConfigurations = {
+        carbon = mkDarwinHost {
+          # macbook pro
+          hostname = "carbon";
+          username = "kyle";
+          modules = [ ./hosts/carbon.nix ];
+        };
+        darwin = mkDarwinHost {
+          # macbook air
+          hostname = "darwin";
+          username = "kyleb";
+          modules = [ ./hosts/darwin.nix ];
+        };
       };
     };
-  };
 }
