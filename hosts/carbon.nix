@@ -49,7 +49,7 @@ in {
       app = "/Applications/Thunderbird.app";
     }
     {
-      app = "/Applications/Cider.app/";
+      app = "/Applications/TIDAL.app/";
     }
   ];
 }
