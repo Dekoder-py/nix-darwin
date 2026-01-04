@@ -26,6 +26,7 @@ in {
     "sf-symbols"
     "obs"
     "altserver"
+    "utm"
   ];
 
   system.defaults.dock.persistent-apps = [
