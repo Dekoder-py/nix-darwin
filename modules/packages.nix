@@ -1,6 +1,7 @@
 { pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     nodePackages.vercel
+    go
     mas
     maven
     yt-dlp
