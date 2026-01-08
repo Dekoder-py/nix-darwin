@@ -4,7 +4,8 @@
 
     sessionVariables = {
       TERM = "xterm-256color";
-      PATH="/Users/kyle/.local/bin:$PATH";
+      PATH="$HOME/.local/bin:$PATH";
+      PATH="$HOME/go/bin:$PATH";
     };
 
     enableCompletion = true;
