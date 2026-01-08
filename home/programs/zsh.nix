@@ -30,7 +30,6 @@
     shellAliases = {
       ".." = "cd ..";
       "..." = "cd ...";
-      lg = "lazygit";
       l = "eza -lh --icons=always";
       ls = "eza -1 --icons=always";
       ll = "eza -lha --icons=always --sort=name --group-directories-first";
