@@ -18,6 +18,7 @@
     };
     greedyCasks = true; # upgrade casks marked as greedy
     casks = [
+      "font-zed-mono-nerd-font"
       "tidal"
       "iina"
       "zen"
