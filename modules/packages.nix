@@ -5,6 +5,7 @@
     rustup
     mas
     maven
+    nil
     yt-dlp
     wget
     uv
