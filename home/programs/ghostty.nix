@@ -5,7 +5,7 @@
 
     settings = {
       theme = "catppuccin-mocha";
-      font-size = 22;
+      font-size = 18;
       font-family = "ZedMono Nerd Font Mono";
       quit-after-last-window-closed = true;
     };
