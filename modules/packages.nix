@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   environment.systemPackages = with pkgs; [
     nodePackages.vercel
     go
@@ -6,6 +7,7 @@
     mas
     maven
     nil
+    nixd
     yt-dlp
     wget
     uv
