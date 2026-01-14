@@ -1,7 +1,9 @@
-{ username
-, nix-homebrew
-, ...
-}: {
+{
+  username,
+  nix-homebrew,
+  ...
+}:
+{
   nix-homebrew = {
     enable = true;
     enableRosetta = true;
@@ -20,6 +22,7 @@
     casks = [
       "font-zed-mono-nerd-font"
       "tidal"
+      "tailscale-app"
       "iina"
       "zen"
       "discord"
