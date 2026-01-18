@@ -41,9 +41,6 @@ in {
       app = "/Applications/Xcode.app/";
     }
     {
-      app = "/Applications/Zed.app/";
-    }
-    {
       app = "/Applications/Slack.app/";
     }
     {
