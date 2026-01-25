@@ -19,6 +19,7 @@ in {
   ];
 
   homebrew.casks = [
+    "ultimaker-cura"
     "godot"
     "docker-desktop"
     "setapp"
