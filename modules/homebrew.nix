@@ -21,6 +21,7 @@
     greedyCasks = true; # upgrade casks marked as greedy
     casks = [
       "font-zed-mono-nerd-font"
+      "dolphin"
       "notion"
       "tidal"
       "tailscale-app"
