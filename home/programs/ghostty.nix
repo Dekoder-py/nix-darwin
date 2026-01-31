@@ -6,7 +6,7 @@
     settings = {
       theme = "catppuccin-mocha";
       font-size = 18;
-      font-family = "ZedMono Nerd Font Mono";
+      font-family = "JetBrainsMono Nerd Font Mono";
       quit-after-last-window-closed = true;
     };
 
