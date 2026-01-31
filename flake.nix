@@ -2,7 +2,7 @@
   description = "Kyle's Macbook Pro System Flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/2175e5c537f60f156c45c67bee082c1cb33d833d";
     nix-darwin = {
       url = "github:nix-darwin/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
