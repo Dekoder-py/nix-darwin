@@ -35,6 +35,9 @@ in {
       app = "/Applications/Notion.app/";
     }
     {
+      app = "/Applications/Obsidian.app/";
+    }
+    {
       app = "/Applications/Slack.app/";
     }
     {
