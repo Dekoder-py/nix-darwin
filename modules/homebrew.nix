@@ -23,7 +23,6 @@
       "font-atkinson-hyperlegible"
       "font-jetbrains-mono-nerd-font"
       "dolphin"
-      "notion"
       "tidal"
       "tailscale-app"
       "iina"

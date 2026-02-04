@@ -32,9 +32,6 @@ in {
       app = "/Applications/Ghostty.app/";
     }
     {
-      app = "/Applications/Notion.app/";
-    }
-    {
       app = "/Applications/Obsidian.app/";
     }
     {
