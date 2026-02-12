@@ -41,6 +41,7 @@
     initContent = ''
       bindkey -e
       bindkey -v
+      bindkey -s ^f "tmux-sessionizer\n"
       eval "$(zoxide init zsh --cmd z)"
 
       export FZF_DEFAULT_COMMAND='fd --hidden --exclude Library --exclude Applications --exclude ".cache"' # fzf will use fd, inculding hidden and excluding large folders
