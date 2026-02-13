@@ -22,10 +22,6 @@
         name = "zsh-vi-mode";
         src = pkgs.zsh-vi-mode;
       }
-      {
-        name = "zsh-fzf-tab";
-        src = pkgs.zsh-fzf-tab;
-      }
     ];
 
     oh-my-zsh = {
@@ -55,13 +51,16 @@
       eval "$(zoxide init zsh --cmd z)"
 
       export FZF_DEFAULT_COMMAND='fd --hidden --exclude Library --exclude Applications --exclude ".cache"' # fzf will use fd, inculding hidden and excluding large folders
-      zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
 
       # The following lines have been added by Docker Desktop to enable Docker CLI completions.
       fpath=(/Users/kyle/.docker/completions $fpath)
       autoload -Uz compinit
       compinit
       # End of Docker CLI completions
+
+      # Load fzf-tab after compinit
+      source ${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh
+      zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
     '';
   };
 }
