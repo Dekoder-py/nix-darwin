@@ -2,6 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
     nodePackages.vercel
+    tldr
     just
     ni
     go
