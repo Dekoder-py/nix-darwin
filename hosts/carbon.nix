@@ -17,7 +17,6 @@ in {
 
   environment.systemPackages = with pkgs; [
     cmake
-    glfw
   ];
 
   homebrew.casks = [
@@ -31,6 +30,10 @@ in {
     "obs"
     "altserver"
     "utm"
+  ];
+
+  homebrew.brews = [
+    "glfw"
   ];
 
   system.defaults.dock.persistent-apps = [
