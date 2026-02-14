@@ -16,10 +16,12 @@ in {
   ];
 
   environment.systemPackages = with pkgs; [
+    cmake
+    glfw
   ];
 
   homebrew.casks = [
-    "glfw"
+    "cmake-app"
     "ultimaker-cura"
     "godot"
     "docker-desktop"
