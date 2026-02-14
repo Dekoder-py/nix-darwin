@@ -32,10 +32,6 @@ in {
     "utm"
   ];
 
-  homebrew.brews = [
-    "glfw"
-  ];
-
   system.defaults.dock.persistent-apps = [
     # set dock apps
     {
