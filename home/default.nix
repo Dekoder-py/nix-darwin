@@ -23,7 +23,6 @@
     ./programs/ghostty.nix
     ./programs/bat.nix
     ./programs/btop.nix
-    ./programs/lazygit.nix
     ./programs/tmux.nix
     ./programs/fastfetch.nix
     ./programs/java.nix
