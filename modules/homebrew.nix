@@ -29,6 +29,8 @@
       "zen"
       "discord"
       "prismlauncher"
+      "godot"
+      "krita"
       "1password"
       "1password-cli"
       "ghostty"
