@@ -31,7 +31,6 @@
       "godot"
       "krita"
       "bitwarden"
-      "bitwarden-cli"
       "ghostty"
       "intellij-idea"
       "home-assistant"

@@ -3,6 +3,7 @@
   environment.systemPackages = with pkgs; [
     nodePackages.vercel
     tldr
+    bitwarden-cli
     just
     ni
     go
