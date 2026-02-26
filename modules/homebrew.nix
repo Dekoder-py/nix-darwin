@@ -22,7 +22,6 @@
     casks = [
       "font-atkinson-hyperlegible"
       "font-jetbrains-mono-nerd-font"
-      "dolphin"
       "tidal"
       "tailscale-app"
       "iina"
@@ -34,6 +33,7 @@
       "bitwarden"
       "bitwarden-cli"
       "ghostty"
+      "intellij-idea"
       "home-assistant"
       "alfred"
       "steam"
