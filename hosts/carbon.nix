@@ -30,7 +30,6 @@ in {
     "obs"
     "altserver"
     "utm"
-    "clion"
   ];
 
   system.defaults.dock.persistent-apps = [
