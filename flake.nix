@@ -60,7 +60,7 @@
         darwin = mkDarwinHost {
           # macbook air
           hostname = "darwin";
-          username = "kyleb";
+          username = "kyle";
           modules = [ ./hosts/darwin.nix ];
         };
       };
