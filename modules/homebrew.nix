@@ -33,6 +33,7 @@
       "bitwarden"
       "ghostty"
       "intellij-idea"
+      "clion"
       "home-assistant"
       "alfred"
       "steam"
