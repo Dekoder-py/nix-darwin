@@ -29,6 +29,7 @@
       "discord"
       "prismlauncher"
       "godot"
+      "todoist-app"
       "krita"
       "bitwarden"
       "ghostty"
