@@ -29,6 +29,7 @@
       "discord"
       "prismlauncher"
       "godot"
+      "tiled"
       "todoist-app"
       "krita"
       "bitwarden"
