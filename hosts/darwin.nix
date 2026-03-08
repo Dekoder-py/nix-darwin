@@ -37,7 +37,7 @@ in {
       app = "/Applications/Slack.app/";
     }
     {
-      app = "/System/Applications/Thunderbird.app/";
+      app = "/Applications/Thunderbird.app/";
     }
   ];
 }
