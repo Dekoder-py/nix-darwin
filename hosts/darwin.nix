@@ -22,7 +22,7 @@ in {
   system.defaults.dock.persistent-apps = [
     # set dock apps
     {
-      app = "/Applications/Zen.app/";
+      app = "/Applications/Helium.app/";
     }
     {
       app = "/Applications/Google Chrome.app/";
@@ -37,7 +37,7 @@ in {
       app = "/Applications/Slack.app/";
     }
     {
-      app = "/System/Applications/Mail.app/";
+      app = "/System/Applications/Thunderbird.app/";
     }
   ];
 }
