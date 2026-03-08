@@ -28,6 +28,7 @@
       "zen"
       "discord"
       "prismlauncher"
+      "helium"
       "godot"
       "tiled"
       "todoist-app"

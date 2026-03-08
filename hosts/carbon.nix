@@ -34,7 +34,7 @@ in {
   system.defaults.dock.persistent-apps = [
     # set dock apps
     {
-      app = "/Applications/Zen.app/";
+      app = "/Applications/Helium.app/";
     }
     {
       app = "/Applications/Ghostty.app/";
