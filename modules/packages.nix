@@ -3,6 +3,7 @@
   environment.systemPackages = with pkgs; [
     nodePackages.vercel
     cmake
+    bun
     ninja
     tldr
     bitwarden-cli
