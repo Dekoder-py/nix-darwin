@@ -25,7 +25,6 @@
       "tidal"
       "tailscale-app"
       "iina"
-      "zen"
       "discord"
       "prismlauncher"
       "helium-browser"
@@ -44,7 +43,6 @@
       "slack"
       "signal"
       "thunderbird"
-      "zed"
     ];
   };
 }
