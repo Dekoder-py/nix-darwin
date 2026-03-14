@@ -31,6 +31,7 @@
     fd
     fzf
     gnupg
+    jdk25_headless
     cargo
   ];
 }

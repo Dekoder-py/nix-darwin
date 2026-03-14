@@ -25,6 +25,5 @@
     ./programs/btop.nix
     ./programs/tmux.nix
     ./programs/fastfetch.nix
-    ./programs/java.nix
   ];
 }
