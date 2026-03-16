@@ -42,6 +42,7 @@
       ld = "eza -lhD --icons=always";
       lt = "eza --icons=always --tree";
       src = "source ~/.zshrc";
+      man = "/usr/bin/man";
     };
 
     initContent = ''
