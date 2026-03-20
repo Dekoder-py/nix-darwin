@@ -46,6 +46,7 @@
     ];
     brews = [
       "raylib"
+      "tree-sitter-cli"
     ];
   };
 }
